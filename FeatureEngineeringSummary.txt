@@ -1,0 +1,38 @@
+In the file jigsaw-toxic-comments-eda-featurization, I did exploratory data analysis on the Jigsaw Toxic Comments dataset
+(https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data). I also worked on feature
+engineering. To provide clarity, here are the final features used on my data:
+scaled_word_count
+the word count of the comment, scaled (from -1 to 1) because of the uneven weighting of lengthier wikipedia comments vs shorter tweets which the model would be applied on later
+
+compound_sentiment_vader
+from the VADER library https://pypi.org/project/vaderSentiment/ compound sentiment (from -1 to 1) calculates the overall positivity or negativity in a comment
+
+neutral_sentiment_vader
+from the VADER library https://pypi.org/project/vaderSentiment/ neutral sentiment (from 0 to 1) estimates the amount of neutrality in a comment
+
+textblob_polarities
+from the Textblob library https://pypi.org/project/textblob/ polarity (from -1 to 1) calculates the overall positivity or negativity in a comment
+
+textblob_subjectivities
+from the Textblob library https://pypi.org/project/textblob/ subjectivity (from 0 to 1) calculates the amount of subjectivity vs objectivity in a comment
+
+sonar_hate_speech
+from the HateSonar library https://github.com/Hironsan/HateSonar/ the hate_speech (from 0 to 1) is the probability for how likely a statement is hate speech
+
+sonar_offensive_language
+from the HateSonar library https://github.com/Hironsan/HateSonar/ offensive_language (from 0 to 1) is the probability for how likely the statement is merely offensive/obscene
+
+sonar_neither
+from the HateSonar library https://github.com/Hironsan/HateSonar/ neither (from 0 to 1) is the probability for how likely the statement is neither
+
+768 columns for each dimension in the BERT embedding
+from Sentence Transformers’ Bert Base NLI Mean Tokens https://huggingface.co/sentence-transformers/bert-base-nli-mean-tokens
+
+profanity_probability
+from the Profanity Check library https://github.com/vzhou842/profanity-check the score (from 0 to 1) returns the probability of how offensive/profane the statement is
+
+ist_present
+either a 0 or 1, 1 if a word used in the comment appears on the list of words I came up with of calling out bigotry (ists_isms.txt)
+
+scaled_spelling_mistakes
+from the LanguageTool library  https://pypi.org/project/language-tool-python/ scaled (from -1 to 1) 
