@@ -1,0 +1,2 @@
+Metrics I used to rank the different models were mean squared error, mean adjusted error, r2 scores, and adjusted r2 scores.
+
