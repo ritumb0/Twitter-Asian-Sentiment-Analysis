@@ -1,6 +1,8 @@
 In the file jigsaw-toxic-comments-eda-featurization, I did exploratory data analysis on the Jigsaw Toxic Comments dataset
 (https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data). I also worked on feature
 engineering. To provide clarity, here are the final features used on my data:
+(Note: The HateSonar library features do not appear in the uploaded code because they were run in another environment due to conflicting packages.)
+
 scaled_word_count
 the word count of the comment, scaled (from -1 to 1) because of the uneven weighting of lengthier wikipedia comments vs shorter tweets which the model would be applied on later
 
