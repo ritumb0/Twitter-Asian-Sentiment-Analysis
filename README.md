@@ -1,4 +1,4 @@
-# Treating Hate Speech as Regression: The Shift in Sentiment Towards Asians on Twitter Throughout the COVID-19 Pandemic
+# Analyzing Change in Sentiment Towards Asians Through the COVID-19 Pandemic
 
 ## Description
 
